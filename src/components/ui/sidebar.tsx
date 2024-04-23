@@ -31,6 +31,16 @@ const activePageIndicator = (pathname: string, targetPath: string): string => {
   }
 };
 
+const mobileActivePageIndicator = (pathname: string, targetPath: string): string => {
+    const baseClass =
+      "flex items-center gap-4 px-2.5";
+    if (pathname === targetPath) {
+      return `${baseClass} text-foreground`;
+    } else {
+      return `${baseClass} text-muted-foreground hover:text-foreground`;
+    }
+  };
+
 const Sidebar: React.FC = () => {
   // Get the active page
   const pathname = usePathname().split("/")[2];
@@ -41,6 +51,13 @@ const Sidebar: React.FC = () => {
   const forumActiveTab = activePageIndicator(pathname, "forum");
   const taActiveTab = activePageIndicator(pathname, "ta");
   const profileActiveTab = activePageIndicator(pathname, "profile");
+
+  // Indicate active pages on mobile devices
+  const mobileHomeActivePage = mobileActivePageIndicator(pathname, "home");
+  const mobileClassesActiveTab = mobileActivePageIndicator(pathname, "classes");
+  const mobileForumActiveTab = mobileActivePageIndicator(pathname, "forum");
+  const mobileTaActiveTab = mobileActivePageIndicator(pathname, "ta");
+  const mobileProfileActiveTab = mobileActivePageIndicator(pathname, "profile");
 
   return (
     <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
@@ -127,35 +144,35 @@ const Sidebar: React.FC = () => {
             </Link>
             <Link
               href="/pages/home"
-              className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+              className={mobileHomeActivePage}
             >
               <HomeIcon className="h-5 w-5" />
               Home
             </Link>
             <Link
               href="/pages/classes"
-              className="flex items-center gap-4 px-2.5 text-foreground"
+              className={mobileClassesActiveTab}
             >
               <Computer className="h-5 w-5" />
               Classes
             </Link>
             <Link
               href="/pages/forum"
-              className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+              className={mobileForumActiveTab}
             >
               <MessageCircleMore className="h-5 w-5" />
               Forum
             </Link>
             <Link
               href="/pages/ta"
-              className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+              className={mobileTaActiveTab}
             >
               <UsersRound className="h-5 w-5" />
               Assistants
             </Link>
             <Link
               href="/pages/profile"
-              className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+              className={mobileProfileActiveTab}
             >
               <LineChart className="h-5 w-5" />
               Settings
