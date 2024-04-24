@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
 import { StickyScroll } from "../aceternity/sticky-scroll-reveal";
-import Image from "next/image";
 
 const content = [
   {
     title: "Contact Your TA",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      "Get in touch with your teaching assistant directly. Ask questions, seek advice, and discuss your coursework. Our platform makes it easy to connect and get the support you need to succeed in your studies.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
         Contact Your TA
@@ -17,27 +16,27 @@ const content = [
   {
     title: "Check TA Hours",
     description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      "See when your teaching assistant is available. Schedule a time that works for you and get the help you need with your assignments. Our platform keeps their hours up-to-date, making it easy to plan your study sessions.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Find Valuable Resources
+        Check TA Hours
       </div>
     ),
   },
   {
     title: "Forum",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Dive into discussions tailored to your classes or explore broader topics in our general forum. Engage with classmates, share insights, and expand your understanding. Our platform connects you directly to the conversations that matter in your academic journey.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
+        Forum
       </div>
     ),
   },
   {
     title: "Contribute to Open Source",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Dive into open source by coding on this very platform! Teaching assistants are here to help you find diverse projects or contribute directly to the tools and features you use every day. If there’s a feature you want to see, you can create it here. Gain practical experience and graduate with real-world skills by helping us evolve and enhance this platform—making it better for you and future students.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
         Contribute to Open Source
