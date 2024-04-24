@@ -1,19 +1,19 @@
-import { Button } from "@/components/ui/button";
 import { HeroHigh } from "@/components/ui/HeroHighlight";
 import { StickyScrollReveal } from "@/components/ui/stickyscrollreveal";
+import Sparkles from "@/components/ui/sparkles";
+import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import { InfiniteMovinfCardsTestimonial } from "@/components/ui/InfiniteMovinfCardsTestimonial";
+import Footer from "@/components/custom/footer";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col dark">
-      {/* <div className="flex flex-row justify-between dark:bg-black py-5 px-10">
-        <p className="text-lg">StudySync</p>
-        <Button variant="secondary">Register</Button>
-      </div> */}
       <HeroHigh />
       <StickyScrollReveal />
-      <div style={{height: 500}}>
-        a
-      </div>
+      <Sparkles title="Biggest Contributors to this platform" />
+      <CanvasRevealEffect />
+      <InfiniteMovinfCardsTestimonial />
+      <Footer />
     </main>
   );
 }
