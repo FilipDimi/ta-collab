@@ -6,16 +6,16 @@ const page = () => {
   return (
     <>
       <Sidebar />
-      <main className="flex-1 container mx-auto py-8 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <ClassCard title="CPS181" subtitle="Kelly" tas="3" />
-        <ClassCard title="CPS181" subtitle="Kelly" tas="3" />
-        <ClassCard title="CPS181" subtitle="Kelly" tas="3" />
-        <ClassCard title="CPS181" subtitle="Kelly" tas="3" />
-        <ClassCard title="CPS181" subtitle="Kelly" tas="3" />
-        <ClassCard title="CPS181" subtitle="Kelly" tas="3" />
-        <ClassCard title="CPS181" subtitle="Kelly" tas="3" />
-        <ClassCard title="CPS181" subtitle="Kelly" tas="3" />
-        <ClassCard title="CPS181" subtitle="Kelly" tas="3" />
+      <main className="flex-1 container mx-auto py-8 px-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ClassCard title="CPS181" subtitle="Prof. Kelly" tas="3" />
+        <ClassCard title="CPS181" subtitle="Prof. Kelly" tas="3" />
+        <ClassCard title="CPS181" subtitle="Prof. Kelly" tas="3" />
+        <ClassCard title="CPS181" subtitle="Prof. Kelly" tas="3" />
+        <ClassCard title="CPS181" subtitle="Prof. Kelly" tas="3" />
+        <ClassCard title="CPS181" subtitle="Prof. Kelly" tas="3" />
+        <ClassCard title="CPS181" subtitle="Prof. Kelly" tas="3" />
+        <ClassCard title="CPS181" subtitle="Prof. Kelly" tas="3" />
+        <ClassCard title="CPS181" subtitle="Prof. Kelly" tas="3" />
       </main>
     </>
   );
