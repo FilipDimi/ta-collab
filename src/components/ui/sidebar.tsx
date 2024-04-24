@@ -31,15 +31,17 @@ const activePageIndicator = (pathname: string, targetPath: string): string => {
   }
 };
 
-const mobileActivePageIndicator = (pathname: string, targetPath: string): string => {
-    const baseClass =
-      "flex items-center gap-4 px-2.5";
-    if (pathname === targetPath) {
-      return `${baseClass} text-foreground`;
-    } else {
-      return `${baseClass} text-muted-foreground hover:text-foreground`;
-    }
-  };
+const mobileActivePageIndicator = (
+  pathname: string,
+  targetPath: string
+): string => {
+  const baseClass = "flex items-center gap-4 px-2.5";
+  if (pathname === targetPath) {
+    return `${baseClass} text-foreground`;
+  } else {
+    return `${baseClass} text-muted-foreground hover:text-foreground`;
+  }
+};
 
 const Sidebar: React.FC = () => {
   // Get the active page
@@ -61,6 +63,9 @@ const Sidebar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+      <div className="container mx-auto flex justify-between items-center py-5">
+        <h1 className="text-2xl font-bold">StudySync</h1>
+      </div>
       <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
         <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
           <TooltipProvider>
@@ -99,9 +104,7 @@ const Sidebar: React.FC = () => {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link
-                  href="/pages/ta"
-                  className={taActiveTab}>
+                <Link href="/pages/ta" className={taActiveTab}>
                   <UsersRound className="h-5 w-5" />
                   <span className="sr-only">Assistants</span>
                 </Link>
@@ -114,9 +117,7 @@ const Sidebar: React.FC = () => {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link
-                  href="/pages/profile"
-                  className={profileActiveTab}>
+                <Link href="/pages/profile" className={profileActiveTab}>
                   <Settings className="h-5 w-5" />
                   <span className="sr-only">Settings</span>
                 </Link>
@@ -142,38 +143,23 @@ const Sidebar: React.FC = () => {
               <University className="h-5 w-5 transition-all group-hover:scale-110" />
               <span className="sr-only">Cmich TAs</span>
             </Link>
-            <Link
-              href="/pages/home"
-              className={mobileHomeActivePage}
-            >
+            <Link href="/pages/home" className={mobileHomeActivePage}>
               <HomeIcon className="h-5 w-5" />
               Home
             </Link>
-            <Link
-              href="/pages/classes"
-              className={mobileClassesActiveTab}
-            >
+            <Link href="/pages/classes" className={mobileClassesActiveTab}>
               <Computer className="h-5 w-5" />
               Classes
             </Link>
-            <Link
-              href="/pages/forum"
-              className={mobileForumActiveTab}
-            >
+            <Link href="/pages/forum" className={mobileForumActiveTab}>
               <MessageCircleMore className="h-5 w-5" />
               Forum
             </Link>
-            <Link
-              href="/pages/ta"
-              className={mobileTaActiveTab}
-            >
+            <Link href="/pages/ta" className={mobileTaActiveTab}>
               <UsersRound className="h-5 w-5" />
               Assistants
             </Link>
-            <Link
-              href="/pages/profile"
-              className={mobileProfileActiveTab}
-            >
+            <Link href="/pages/profile" className={mobileProfileActiveTab}>
               <LineChart className="h-5 w-5" />
               Settings
             </Link>
